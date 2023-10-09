@@ -1,0 +1,11 @@
+{
+  "name": "cs490-project",
+  "version": "1.0.0",
+  "description": "This repo is dedicated to the projet in CS490.",
+  "main": "playerClass.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
