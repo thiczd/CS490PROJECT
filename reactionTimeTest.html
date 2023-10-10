@@ -6,14 +6,85 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="index.css">
         <title>Group 3 Human Benchmark Demo</title>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
     <body>
-        <button class="btn btn-GameEvent" id="Main-interact">Click to start</button>
-        <script defer type="text/javascript" src="reactionTimeTest.js"></script>
-        <p class="ReturnTime" id="TimeText">0.00</p>
+        <nav class="flex flex-wrap
+w-full p-4 text-lg text-gray-700 justify-end
 
-        <a href="index.html" class="btn btn-Back">Back</a>
+bg-blue-400 mx-auto">
+    <div class="max-w-screen-xl flex flex-wrap items-center m-auto">
+        <span class="font-semibold text-xl text-white">Human BenchMarker</span>
+
+
+    </div>
+
+
+    <a href="./index.html"
+        class="m-2 hover:no-underline hover:bg-blue-500 text-gray-200 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        Home</a>
+
+    <a href="./reactionTimeTest.html"
+        class="m-2 hover:no-underline hover:bg-blue-500 text-gray-200 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        Reaction Time</a>
+    <a href="./timerGuesser.html"
+        class=" m-2 hover:no-underline hover:bg-blue-500 text-gray-200 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        Time Guesser</a>
+    <a href="./timerGuesser.html"
+        class=" m-2 hover:no-underline hover:bg-blue-500 text-gray-200 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        Log In</a>
+    <a href="./timerGuesser.html"
+        class=" m-2 hover:no-underline hover:bg-blue-500 text-gray-200 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        Leaderboard</a>
+
+
+
+
+</nav>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+        
+        <div class ="border-2 border-gray-200 mt-48 content-center 
+        rounded-xl m-48  flex flex-col items-center justify-center pt-24 pb-24 bg-gray-100">
+        
+        
+        
+        
+            <div class = "mt-2 flex justify-center">
+        <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
+        mb-2 hover:border-orange-400 hover:text-orange-400 p-16 bg-gray-50
+        font-bold text-gray-500
+        " id="Main-interact">Click to start</button>
+        
+        </div>
+        
+        <script defer type="text/javascript" src="reactionTimeTest.js"></script>
+        
+        
+        <div class = "border-2 bg-gray-200 rounded-xl pl-12 pr-12 p-4 flex justify-between">
+        <p class = "font-bold mt-2">Return Time:</p>
+        <p class="ReturnTime font-bold p-2 ml-8 text-green-400" id="TimeText">0.00</p>
+        <p class="ReturnTime font-bold p-2 text-green-400">s</p>
+         
+    </div>
+        
+    
+
+      
+        
+    </div>
     </body>
 
 </html>
