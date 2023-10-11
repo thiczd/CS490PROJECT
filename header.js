@@ -36,7 +36,7 @@ let appHeader = `
     <path d="M19 22v.01" />
     <path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" />
     </svg></a>
-  <a href="./timerGuesser.html" title="Log in"
+  <a href="./login.html" title="Log in"
     class="items-center m-2 hover:no-underline hover:bg-blue-500 text-white font-semibold py-2 px-2 hover:border-transparent rounded">
     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -44,7 +44,7 @@ let appHeader = `
     <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
     <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
     </svg></a>
-  <a href="./timerGuesser.html" title="Leaderboard"
+  <a href="./leaderboard.html" title="Leaderboard"
   class="items-center m-2 hover:no-underline hover:bg-blue-500 text-white font-semibold py-2 px-2 hover:border-transparent rounded">
     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-medal" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>

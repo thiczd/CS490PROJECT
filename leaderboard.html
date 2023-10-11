@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Leaderboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- apply header from header.js -->
+    <div id="app-header"></div>
+    <script async src="header.js"></script>
+
+        <div class="flex justify-center mt-20">
+            <!-- Dropdown Menu -->
+            <div class="relative mr-6">
+                <button class="bg-white px-4 py-2 border rounded text-sm font-semibold text-gray-600" id="options-menu">
+                Select Game
+                </button>
+                <div class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 border bg-white rounded" id="dropdown-menu" style="display:none;">
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-200 text-sm font-semibold text-gray-600">Reaction Time Test</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-200 text-sm font-semibold text-gray-600">Timer Guesser</a>
+                </div>
+            </div>
+            <script defer type="text/javascript" src="leaderboard.js"></script>
+  
+            <!-- Leaderboard Header -->
+            <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-2xl">
+                <h1 class="text-2xl font-bold mb-4 text-center m-0">[GAME] Leaderboard</h1> <!-- [GAME] is placeholder -->
+
+                <!-- Table -->
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">Username
+                            </th>
+                            <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">Score
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sample data -->
+                        <tr>
+                            <td class="py-2 px-4 border-b border-gray-200 text-sm">User1</td>
+                            <td class="py-2 px-4 border-b border-gray-200 text-sm">100</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b border-gray-200 text-sm">User2</td>
+                            <td class="py-2 px-4 border-b border-gray-200 text-sm">95</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b border-gray-200 text-sm">User3</td>
+                            <td class="py-2 px-4 border-b border-gray-200 text-sm">92</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b border-gray-200 text-sm">User4</td>
+                            <td class="py-2 px-4 border-b border-gray-200 text-sm">90</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Text underneath Table -->
+    <div class="bg-gray-50 rounded-xl my-4 mx-20 p-10 border-gray-200 border-solid border-2 ">
+        <p class="text-center"> 
+            This div could be used to showcase leaderboard stats and other important numbers or informations.
+            This div could be used to showcase leaderboard stats and other important numbers or informations.
+            This div could be used to showcase leaderboard stats and other important numbers or informations.
+            This div could be used to showcase leaderboard stats and other important numbers or informations.
+        </p>
+    </div>
+
+</body>
+
+</html>
