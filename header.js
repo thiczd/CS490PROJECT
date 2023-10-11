@@ -53,6 +53,7 @@ let appHeader = `
     <path d="M12 7v5l2 2" />
     <path d="M19 22v.01" />
     <path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" />
+
     </svg>
     <p class="font-bold mt-2 ml-2 text-white">Time Guesser</p>
 
@@ -60,6 +61,7 @@ let appHeader = `
     </div>
     </a>
   <a href="./timerGuesser.html" title="Log in"
+
     class="items-center m-2 hover:no-underline hover:bg-blue-500 text-white font-semibold py-2 px-2 hover:border-transparent rounded">
             <div class="flex flex-center">
 
@@ -68,6 +70,7 @@ let appHeader = `
     <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
     <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
     <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+
     </svg>
      <p class="font-bold mt-2 ml-2 text-white">Log In</p>
 
@@ -76,6 +79,7 @@ let appHeader = `
     
     </a>
   <a href="./timerGuesser.html" title="Leaderboard"
+
   class="items-center m-2 hover:no-underline hover:bg-blue-500 text-white font-semibold py-2 px-2 hover:border-transparent rounded">
               <div class="flex flex-center">
  
