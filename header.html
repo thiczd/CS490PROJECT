@@ -1,55 +1,22 @@
-<head>
-  <link rel="stylesheet" href="https://cdn.tailwindcss.com">
-  <style>
-    /* CSS for the hamburger menu */
-    .nav-menu {
-      display: none;
-    }
-
-    .nav-menu.active {
-      display: block;
-    }
-
-    .menu-toggle {
-      display: block;
-    }
-
-    @media (max-width: 768px) {
-      .nav-menu {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #333;
-        padding: 10px;
-      }
-    }
-  </style>
-</head>
-
-<nav class="flex flex-wrap w-full p-4 text-lg text-gray-700 justify-end bg-blue-400 mx-auto">
-  <div class="max-w-screen-xl flex flex-wrap items-center m-auto">
-    <span class="font-semibold text-xl text-white">Human Benchmark</span>
-    <button id="menu-toggle" class="ml-auto menu-toggle">
-      ☰ <!-- Hamburger icon -->
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand text-white" href="#">Human Benchmark</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-  </div>
-
-  <div id="nav-menu" class="nav-menu">
-    <a href="./reactionTimeTest.html" class="m-2 text-gray-200 font-semibold py-2 px-4">Reaction Time</a>
-    <a href="./timerGuesser.html" class="m-2 text-gray-200 font-semibold py-2 px-4">Time Guesser</a>
-    <a href="./timerGuesser.html" class="m-2 text-gray-200 font-semibold py-2 px-4">Log In</a>
-    <a href="./timerGuesser.html" class="m-2 text-gray-200 font-semibold py-2 px-4">Leaderboard</a>
-  </div>
-</nav>
-
-<script>
-  // JavaScript to toggle the hamburger menu
-  const menuToggle = document.getElementById("menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
-
-  menuToggle.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
-  });
-</script>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./reactionTimeTest.html">Reaction Time</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./timerGuesser.html">Time Guesser</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./login.html">Log In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./leaderboard.html">Leaderboard</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
