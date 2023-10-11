@@ -1,4 +1,5 @@
 
+<!--
 <head>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -29,7 +30,34 @@ bg-blue-400 mx-auto">
         Leaderboard</a>
 
 </nav>
-
+-->
+<nav class="bg-gray-800">
+    <div class="container mx-auto px-6 py-3">
+      <div class="flex items-center justify-between">
+        <div class="hidden md:flex">
+          <a class="text-gray-300 hover:text-gray-100 px-3 py-2 rounded-md text-sm font-medium" href="#">Home</a>
+          <a class="text-gray-300 hover:text-gray-100 px-3 py-2 rounded-md text-sm font-medium" href="#">About</a>
+          <a class="text-gray-300 hover:text-gray-100 px-3 py-2 rounded-md text-sm font-medium" href="#">Contact</a>
+        </div>
+        <div class="flex md:hidden">
+          <button type="button" class="text-gray-500 hover:text-white focus:outline-none focus:text-white" aria-label="toggle menu">
+            <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+              <path fill-rule="evenodd" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile menu, toggle classes based on menu state -->
+    <div class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 sm:px-3">
+        <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="#">Home</a>
+        <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="#">About</a>
+        <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="#">Contact</a>
+      </div>
+    </div>
+  </nav>
 <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <script type="text/javascript">
