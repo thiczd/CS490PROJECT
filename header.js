@@ -60,7 +60,7 @@ let appHeader = `
 
     </div>
     </a>
-  <a href="./timerGuesser.html" title="Log in"
+  <a href="./login.html" title="Log in"
 
     class="items-center m-2 hover:no-underline hover:bg-blue-500 text-white font-semibold py-2 px-2 hover:border-transparent rounded">
             <div class="flex flex-center">
@@ -78,7 +78,7 @@ let appHeader = `
     </div>
     
     </a>
-  <a href="./timerGuesser.html" title="Leaderboard"
+  <a href="./leaderboard.html" title="Leaderboard"
 
   class="items-center m-2 hover:no-underline hover:bg-blue-500 text-white font-semibold py-2 px-2 hover:border-transparent rounded">
               <div class="flex flex-center">
