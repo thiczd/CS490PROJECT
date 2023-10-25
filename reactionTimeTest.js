@@ -1,9 +1,11 @@
+//import React from "react";
 //import "PlayerClass.js"
 // TODO: PlayerClass => needs alot
 
 // ====Game Params====
 var userGreenTime;
 var randTimeParam = 4;
+var fFail = 0;
 
 //Keep track of the User Game State.
 const GameState = {
@@ -20,34 +22,95 @@ User.GameState = 0;
 // HTML Objs
 const btn = document.querySelector(".btn");
 const returnTime = document.querySelector(".ReturnTime"); 
+
+        //Change this to an ID later on...
+const timeTrailS = document.getElementsByClassName("ReturnTime font-bold p-2 text-green-400")[1];
 // -----
 
+document.addEventListener("DOMContentLoaded", () => {
+    
+    let startTime = null;
+    let redButtonTimeout = null;
+    let randTime;
+    const timeouts = [];
 
-btn.addEventListener("click", () => {
-        //Set to starting a state transition to InProgress
-        if (User.GameState == 0) {
-            btn.style.backgroundColor = "red";
-            User.GameState = 1;
-        }
+    //Default button config
+    btn.style.backgroundColor = "white";
+    btn.textContent = "Click to start!";
+
+    //Clicked to start run this
+    function reactGameStart() {
+        btn.style.backgroundColor = "Red";
+        btn.textContent = "Not Yet!";
+        User.GameState = GameState.InProgress;
+
+        //Pick a number between 1-3 and sec -> milsec
+        startTime = Date.now();
+        randTime = Math.floor((Math.random() * randTimeParam)+1) * 1000;
+        console.log(randTime);
+
+        redButtonTimeout = setTimeout(()=>{
+            btn.style.backgroundColor = "green";
+            btn.textContent = "Click!";
+            userGreenTime = Date.now();
+        }, randTime);
+
+        timeouts.push(redButtonTimeout)
+    }
+    
+    //Click after button is green (winning)
+    function reactGameEnd() {
+        btn.style.backgroundColor = "white";
+        btn.textContent = "Click to start!";
+        User.GameState = GameState.Start;
+        returnTime.innerText = (Date.now() - userGreenTime)/1000;
         
-        //No cheating protection yet (you can just spam the button rn)
-        if (User.GameState == 1) {
-            //Pick a number between 1-3 and sec -> milsec
-            var randTime = Math.floor((Math.random() * randTimeParam)+1) * 1000;
-            console.log(randTime);
-            setTimeout(() => {
-                User.GameState = 2;
-                btn.style.backgroundColor = "green";
-                userGreenTime = Date.now();
-            }, randTime);
-        }
-    
-        if (User.GameState == 2) {
-            //Current state if the user has clicked only in the green
-            var userInputTime = Date.now() - userGreenTime;
-    
-            btn.style.backgroundColor = "white";
-            returnTime.innerText = userInputTime/1000;
-            User.GameState = 0; // end or start again havent decided.
-        }
+    }
+
+    //Click before button is green (losing)
+    function reactGameFail() {
+        User.GameState = GameState.End;
+        btn.textContent = "Fail!";
+        returnTime.innerText = "Fail!";
+        timeTrailS.style.visibility = 'hidden';
+
+        setTimeout(() => {
+            User.GameState = GameState.Start;
+            btn.style.backgroundColor = "White";
+            btn.textContent = "Click to start!";
+            timeTrailS.style.visibility = 'visible';
+            returnTime.innerText = "0.00";
+        }, 2000); // 3 seconds to reset game
+    }
+
+    btn.addEventListener("click", () => {
+        if (User.GameState === GameState.Start || User.GameState === GameState.End) {
+            console.log("Game Start!");
+            for (var i = 0; i < timeouts.length; i++) {
+                clearTimeout(timeouts[i]);
+            }
+
+            reactGameStart();
+        } else if (randTime > Date.now()-startTime && User.GameState === GameState.InProgress) {
+            console.log("Fail");
+            // Clear any and all left over timeouts
+            for (var i = 0; i < timeouts.length; i++) {
+                clearTimeout(timeouts[i]);
+            }
+            clearTimeout(redButtonTimeout);
+            redButtonTimeout = null;
+            console.log((Date.now() - startTime) / 1000);
+            reactGameFail();
+
+        } else if (randTime < Date.now()-startTime && User.GameState === GameState.InProgress) {
+            console.log("You won!");
+            reactGameEnd();
+
+            // Clear any and all left over timeouts
+            for (var i = 0; i < timeouts.length; i++) {
+                clearTimeout(timeouts[i]);
+            }
+            redButtonTimeout= null;
+        } 
+    });
 });
