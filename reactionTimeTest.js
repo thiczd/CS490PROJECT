@@ -2,36 +2,33 @@
 //import "PlayerClass.js"
 // TODO: PlayerClass => needs alot
 
-// ====Game Params====
-var userGreenTime;
-var randTimeParam = 4;
-var fFail = 0;
-
 //Keep track of the User Game State.
 const GameState = {
     Start: 0,
-    InRed: 1,
-    InGreen: 2,
     End: 3
 }
-//User gen
-//const CurrentUser = new UserPlayer();
-let User = GameState;
-User.GameState = 0;
 
 // HTML Objs
-const btn = document.querySelector(".btn");
-const returnTime = document.querySelector(".ReturnTime"); 
-
-        //Change this to an ID later on...
-const timeTrailS = document.getElementsByClassName("ReturnTime font-bold p-2 text-green-400")[1];
+const btn = document.getElementById("Main-interact");
+const returnTime = document.getElementById("returnTime"); 
+const timeTrailS = document.getElementById("trailingS"); // ID for the trailing S for the reaction time.
 // -----
 
 document.addEventListener("DOMContentLoaded", () => {
-    
+    //User gen
+    //const CurrentUser = new UserPlayer();
+    let User = GameState;
+    User.GameState = 0;
+
+    // ====Game Params====
+    var userGreenTime;
+    var randTimeParam = 4;
+
     let startTime = null;
     let redButtonTimeout = null;
     let randTime;
+
+    //Array storing any or all timeouts
     const timeouts = [];
 
     //Default button config
@@ -84,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     btn.addEventListener("click", () => {
-        if (User.GameState === GameState.Start || User.GameState === GameState.End) {
+        if (User.GameState === GameState.Start) {
             console.log("Game Start!");
             for (var i = 0; i < timeouts.length; i++) {
                 clearTimeout(timeouts[i]);
