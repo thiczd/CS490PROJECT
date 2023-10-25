@@ -6,7 +6,7 @@
     <script async src="header.js"></script>  
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="output.css">
         <title>Timer Guesser</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
@@ -15,14 +15,16 @@
         
         
         
-        
+        <div class="border-2 border-gray-200 mt-48 content-center 
+        rounded-xl m-48  flex flex-col items-center justify-center pt-24 pb-24 bg-gray-100 pr-24 pl-24">
+
         <div id="goal-time"> Goal Time: <span id="goal-time-val">0</span> seconds</div>
-        <button class="btn btn-GameEvent" id="Main-interact">Click to start</button>
+        <button class="btn btn-GameEvent border-2 rounded-xl" id="Main-interact">Click to start</button>
         <script defer type="text/javascript" src="timerGuesser.js"></script>
         <div id="user-guess">User Guess: <span id="user-guess-val"></span></div>
-        <div id="score"><span id="score-val"></span></div>
-
-        <a href="index.html" class="btn btn-Back">Back</a>
+        <div id="score" ><span id="score-val"></span></div>
+    </div>
+        
     </body>
 
 </html>
