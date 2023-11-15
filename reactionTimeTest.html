@@ -33,13 +33,14 @@
             <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
             mb-2 hover:border-orange-400 hover:text-orange-400 p-16 bg-gray-50
             font-bold text-gray-500
-            " id="copy-results" onclick="copyContent()">Copy my score to the clipboard!</button>
+            " id="copy-results" onclick="copyContent()" style="display: none;">Copy my score to the clipboard!</button>
         </div>
 
         <script>
             const copyContent = async () => {
               try {
-                await navigator.clipboard.writeText("I copied this with a button");
+                let copyText = typeof globalScore === "number" ? "Your Score: " + globalScore : globalScore;
+                await navigator.clipboard.writeText(copyText);
                 var copyButton = document.getElementById("copy-results");
                 copyButton.innerText = "Copied!";
                 console.log('Content copied to clipboard');
