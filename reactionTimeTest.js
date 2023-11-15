@@ -14,6 +14,9 @@ const returnTime = document.getElementById("returnTime");
 const timeTrailS = document.getElementById("trailingS"); // ID for the trailing S for the reaction time.
 // -----
 
+// Gloval Score - used for copying to the clipboard
+let globalScore = 0;
+
 document.addEventListener("DOMContentLoaded", () => {
     //User gen
     //const CurrentUser = new UserPlayer();
@@ -60,8 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.style.backgroundColor = "white";
         btn.textContent = "Click to start!";
         User.GameState = GameState.Start;
-        returnTime.innerText = (Date.now() - userGreenTime)/1000;
-        
+        globalScore = (Date.now() - userGreenTime)/1000;
+        returnTime.innerText = globalScore
+
+        document.getElementById("copy-results").style.display = "block"; // Display copy button
     }
 
     //Click before button is green (losing)
@@ -69,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         User.GameState = GameState.End;
         btn.textContent = "Fail!";
         returnTime.innerText = "Fail!";
+        globalScore = "Reaction Time: Fail!";
         timeTrailS.style.visibility = 'hidden';
 
         setTimeout(() => {
@@ -78,6 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
             timeTrailS.style.visibility = 'visible';
             returnTime.innerText = "0.00";
         }, 2000); // 3 seconds to reset game
+
+        document.getElementById("copy-results").style.display = "block"; // Display copy button
     }
 
     btn.addEventListener("click", () => {
