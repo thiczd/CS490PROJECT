@@ -13,6 +13,8 @@ const btn = document.querySelector(".btn");
 const returnTime = document.querySelector(".ReturnTime"); 
 // -----
 
+// Gloval Game Output - used for copying to the clipboard
+let gameOutput = "";
 
 document.addEventListener("DOMContentLoaded", () => {
     const goalTimeDisplay = document.getElementById("goal-time-val");
@@ -42,16 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
         const elapsed = (Date.now() - startTime) / 1000;
         userGuessDisplay.textContent = `${elapsed.toFixed(2)} seconds`; // Display user's guess
         const score = Math.abs(goalTime - elapsed);
+        gameOutput = `User Guess: ${elapsed.toFixed(2)} seconds.`;
 
         // Display score (|goalTime - elapsed|)
         if (score === 0) {
             scoreDisplay.textContent = "Perfect score!";
+            gameOutput += " Perfect score!";
         } else {
             scoreDisplay.textContent = `You missed the goal time by ${score.toFixed(2)} seconds`; 
+            gameOutput += ` Missed the goal time by ${score.toFixed(2)} seconds`;
         }
 
         button.textContent = "Click to start";
         User.GameState = GameState.End;
+
+        document.getElementById("copy-results").style.display = "block"; // Display copy button
     }
 
     button.addEventListener("click", () => {
