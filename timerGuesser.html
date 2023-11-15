@@ -12,18 +12,39 @@
     </head>
 
     <body>
-        
-        
-        
+
         <div class="border-2 border-gray-200 mt-48 content-center 
         rounded-xl m-48  flex flex-col items-center justify-center pt-24 pb-24 bg-gray-100 pr-24 pl-24">
 
-        <div id="goal-time"> Goal Time: <span id="goal-time-val">0</span> seconds</div>
-        <button class="btn btn-GameEvent border-2 rounded-xl" id="Main-interact">Click to start</button>
-        <script defer type="text/javascript" src="timerGuesser.js"></script>
-        <div id="user-guess">User Guess: <span id="user-guess-val"></span></div>
-        <div id="score" ><span id="score-val"></span></div>
-    </div>
+            <div id="goal-time"> Goal Time: <span id="goal-time-val">0</span> seconds</div>
+            <button class="btn btn-GameEvent border-2 rounded-xl" id="Main-interact">Click to start</button>
+            <script defer type="text/javascript" src="timerGuesser.js"></script>
+            <div id="user-guess">User Guess: <span id="user-guess-val"></span></div>
+            <div id="score" ><span id="score-val"></span></div>
+        </div>
+
+        <div class = "mt-2 flex justify-center">
+            <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
+            mb-2 hover:border-orange-400 hover:text-orange-400 p-16 bg-gray-50
+            font-bold text-gray-500
+            " id="copy-results" onclick="copyContent()" style="display: none;">Copy my score to the clipboard!</button>
+        </div>
+
+        <script>
+            const copyContent = async () => {
+              try {
+                await navigator.clipboard.writeText(gameOutput);
+                var copyButton = document.getElementById("copy-results");
+                copyButton.innerText = "Copied!";
+                console.log('Content copied to clipboard');
+                setTimeout(function() {
+                    copyButton.innerText = "Copy my score to the clipboard!";
+                }, 2000);
+              } catch (err) {
+                console.error('Failed to copy: ', err);
+              }
+            }
+          </script>
         
     </body>
 
