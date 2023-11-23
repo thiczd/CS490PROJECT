@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         gameOutput += "\n📈Human Benchmark📈\nhttps://breakthegreat.github.io/CS490PROJECT/timerGuesser.html"
 
-        button.textContent = "Click to start";
+        button.textContent = "Click to try again!";
         User.GameState = GameState.End;
 
         document.getElementById("copy-results").style.display = "block"; // Display copy button

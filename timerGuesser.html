@@ -16,16 +16,19 @@
         <div class="border-2 border-gray-200 mt-48 content-center 
         rounded-xl m-48  flex flex-col items-center justify-center pt-24 pb-24 bg-gray-100 pr-24 pl-24">
 
-            <div id="goal-time"> Goal Time: <span id="goal-time-val">0</span> seconds</div>
-            <button class="btn btn-GameEvent border-2 rounded-xl" id="Main-interact">Click to start</button>
+            <div id="goal-time" class = "font-bold mt-2"> Goal Time: <span id="goal-time-val">0</span> seconds</div>
+            <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
+            mb-2 hover:border-orange-400 hover:text-orange-400 p-6 bg-gray-50
+            font-bold text-gray-500
+            " id="Main-interact">Click to start!</button>
             <script defer type="text/javascript" src="timerGuesser.js"></script>
-            <div id="user-guess">User Guess: <span id="user-guess-val"></span></div>
-            <div id="score" ><span id="score-val"></span></div>
+            <div id="user-guess" class = "font-bold mt-2">User Guess: <span id="user-guess-val"></span></div>
+            <div id="score" class = "font-bold mt-2"><span id="score-val"></span></div>
         </div>
 
         <div class = "mt-2 flex justify-center">
             <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
-            mb-2 hover:border-orange-400 hover:text-orange-400 p-16 bg-gray-50
+            mb-2 hover:border-orange-400 hover:text-orange-400 p-6 bg-gray-50
             font-bold text-gray-500
             " id="copy-results" onclick="copyContent()" style="display: none;">Copy my score to the clipboard!</button>
         </div>
