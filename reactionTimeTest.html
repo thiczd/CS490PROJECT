@@ -39,7 +39,7 @@
         <script>
             const copyContent = async () => {
               try {
-                let copyText = typeof globalScore === "number" ? "⏰Reaction Time Test⏰\nMy Score: " + globalScore + " sec\nHuman Benchmark\nhttps://breakthegreat.github.io/CS490PROJECT/reactionTimeTest.html": globalScore;
+                let copyText = typeof globalScore === "number" ? "⏰Reaction Time Test⏰\nMy Score: " + globalScore + " sec\n📈Human Benchmark📈\nhttps://breakthegreat.github.io/CS490PROJECT/reactionTimeTest.html": globalScore;
                 await navigator.clipboard.writeText(copyText);
                 var copyButton = document.getElementById("copy-results");
                 copyButton.innerText = "Copied!";
