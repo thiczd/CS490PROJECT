@@ -44,18 +44,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const elapsed = (Date.now() - startTime) / 1000;
         userGuessDisplay.textContent = `${elapsed.toFixed(2)} seconds`; // Display user's guess
         const score = Math.abs(goalTime - elapsed);
-        gameOutput = `User Guess: ${elapsed.toFixed(2)} seconds.`;
+        gameOutput = `⏲Timer Guesser⏲\nMy Guess: ${elapsed.toFixed(2)} seconds`;
 
         // Display score (|goalTime - elapsed|)
         if (score === 0) {
             scoreDisplay.textContent = "Perfect score!";
-            gameOutput += " Perfect score!";
+            gameOutput += "\nI got a perfect score!";
         } else {
             scoreDisplay.textContent = `You missed the goal time by ${score.toFixed(2)} seconds`; 
-            gameOutput += ` Missed the goal time by ${score.toFixed(2)} seconds`;
+            gameOutput += `\nI missed the goal time by ${score.toFixed(2)} seconds`;
         }
+        gameOutput += "\n📈Human Benchmark📈\nhttps://breakthegreat.github.io/CS490PROJECT/timerGuesser.html"
 
-        button.textContent = "Click to start";
+        button.textContent = "Click to try again!";
         User.GameState = GameState.End;
 
         document.getElementById("copy-results").style.display = "block"; // Display copy button
