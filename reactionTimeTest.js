@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         User.GameState = GameState.End;
         btn.textContent = "Fail!";
         returnTime.innerText = "Fail!";
-        globalScore = "Reaction Time: Fail!";
+        globalScore = "⏰Reaction Time Test⏰\nMy Score: ❌ Fail! ❌\nHuman Benchmark\nhttps://breakthegreat.github.io/CS490PROJECT/reactionTimeTest.html";
         timeTrailS.style.visibility = 'hidden';
 
         setTimeout(() => {
