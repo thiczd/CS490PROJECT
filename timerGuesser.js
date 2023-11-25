@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function startGame() {
         goalTime = Math.floor(Math.random() * 10) + 1; // Randomly generate goal time between 1 and 10 seconds
-        goalTimeDisplay.textContent = goalTime; // Display goal time
+        goalTimeDisplay.textContent = goalTime + ' seconds'; // Display goal time
         startTime = Date.now();
         button.textContent = "Click to stop";
         User.GameState = GameState.InProgress;

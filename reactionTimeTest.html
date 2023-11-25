@@ -14,7 +14,7 @@
     <body>
 
 
-        <div class="flex justify-center mt-36 mb-0">
+        <div class="flex justify-center mt-8 mb-0">
             <p class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500"> Reaction Time </p>
             
         
@@ -31,7 +31,7 @@
         </div>
 
         <div class ="border-2 border-gray-200 mt-12 content-center 
-        rounded-xl m-48  flex flex-col items-center justify-center pt-24 pb-24 bg-gray-100">
+        rounded-xl m-12 mb-0  flex flex-col items-center justify-center pt-24 pb-24 bg-gray-100">
 
             <div class = "mt-2 flex justify-center">
                 <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
@@ -49,9 +49,9 @@
         </div>
         <div class = "mt-2 flex justify-center">
             <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
-            mb-1 hover:border-orange-400 hover:text-orange-400 p-6 bg-gray-50
+            mb-1 hover:border-orange-400 hover:text-orange-400  bg-gray-50
             font-bold text-gray-500
-            " id="copy-results" onclick="copyContent()" style="display: none;">Copy my score to the clipboard!</button>
+            " id="copy-results" onclick="copyContent()" style="display: none;" > Share my score!</button>
         </div>
 
         <script>
@@ -61,7 +61,7 @@
                 await navigator.clipboard.writeText(copyText);
                 var copyButton = document.getElementById("copy-results");
                 copyButton.innerText = "Copied!";
-                console.log('Content copied to clipboard');
+                console.log('Share my score!');
                 setTimeout(function() {
                     copyButton.innerText = "Copy my score to the clipboard!";
                 }, 2000);
