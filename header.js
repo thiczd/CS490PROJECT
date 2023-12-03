@@ -7,8 +7,13 @@ let appHeader = `
 <div class="bg-gradient-to-r from-pink-400 to-orange-700 pb-0.5">
 
 <nav class="flex flex-wrap w-full p-2 text-lg bg-gray-800 mx-auto border-b">
-  <div class="max-w-screen-xl flex flex-wrap items-center m-auto">
-      <span class="text-2xl font-semibold whitespace-nowra text-white transition ease-in-out delay-100 hover:scale-125 hover:cursor-default">OurApp</span>
+  
+
+
+
+<div class="max-w-screen-xl flex flex-wrap items-center m-auto text-white transition ease-in-out delay-100 hover:scale-125 hover:cursor-default">
+<img src="images/joystick.png" class="h-12 w-12 mr-2 mb-2"> 
+      <span class="text-2xl font-semibold whitespace-nowra ">OurApp</span>
   </div>
 
   <a href="./index.html" title="Go to homepage"
