@@ -12,6 +12,7 @@ const GameState = {
 const btn = document.getElementById("Main-interact");
 const returnTime = document.getElementById("returnTime"); 
 const timeTrailS = document.getElementById("trailingS"); // ID for the trailing S for the reaction time.
+const border = document.getElementById("borderReactionTime");
 // -----
 
 // Gloval Score - used for copying to the clipboard
@@ -35,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const timeouts = [];
 
     //Default button config
-    btn.style.backgroundColor = "white";
     btn.textContent = "Click to start!";
 
     //Clicked to start run this
@@ -56,11 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }, randTime);
 
         timeouts.push(redButtonTimeout)
+
     }
     
     //Click after button is green (winning)
     function reactGameEnd() {
-        btn.style.backgroundColor = "white";
+        border.style.borderColor = "Green";
+        btn.style.backgroundColor="#111827";
         btn.textContent = "Click to start!";
         User.GameState = GameState.Start;
         globalScore = (Date.now() - userGreenTime)/1000;
@@ -72,14 +74,20 @@ document.addEventListener("DOMContentLoaded", () => {
     //Click before button is green (losing)
     function reactGameFail() {
         User.GameState = GameState.End;
+      
         btn.textContent = "Fail!";
         returnTime.innerText = "Fail!";
+        returnTime.style.color="Red";
+        border.style.borderColor = "Red";
+
         globalScore = "⏰Reaction Time Test⏰\nMy Score: ❌ Fail! ❌\n📈Human Benchmark📈\nhttps://breakthegreat.github.io/CS490PROJECT/reactionTimeTest.html";
         timeTrailS.style.visibility = 'hidden';
 
         setTimeout(() => {
             User.GameState = GameState.Start;
-            btn.style.backgroundColor = "White";
+            btn.style.backgroundColor = "#111827";
+            returnTime.style.color="Green";            
+
             btn.textContent = "Click to start!";
             timeTrailS.style.visibility = 'visible';
             returnTime.innerText = "0.00";

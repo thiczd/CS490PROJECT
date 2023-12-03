@@ -11,7 +11,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body>
+    <body class="bg-gray-800">
 
 
         <div class="flex justify-center mt-8 mb-0">
@@ -20,8 +20,8 @@
         
         </div>
 
-        <div class="flex justify-center mr-24 ml-24 mt-12 border-2 rounded-lg p-4 border-neutral-100">
-            <p class="text-xl font-extralight">The goal of this game is
+        <div class=" bg-gray-800 flex justify-center mr-24 ml-24 mt-12 border-2 rounded-lg p-8 border-neutral-100">
+            <p class="text-xl font-extralight text-gray-300">The goal of this game is
                  simple, you are provided with a button, your goal 
                  is to click as fast as you can when that button 
                  turns green. Once you finish you will be able 
@@ -31,26 +31,25 @@
         </div>
 
         <div class ="border-2 border-gray-200 mt-12 content-center 
-        rounded-xl m-12 mb-0  flex flex-col items-center justify-center pt-24 pb-24 bg-gray-100">
+        rounded-xl m-12 mb-0  flex flex-col items-center justify-center pt-24 pb-24 bg-gray-800">
 
             <div class = "mt-2 flex justify-center">
                 <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
-                mb-1 hover:border-orange-400 hover:text-orange-400 p-4 bg-gray-50
-                font-bold text-gray-500
-                " id="Main-interact">Click to start!</button>
+                mb-1 hover:border-orange-400 hover:text-orange-400 p-4  bg-gray-900
+                font-bold text-gray-500" id="Main-interact">Click to start!</button>
             </div>
             <script defer type="text/javascript" src="reactionTimeTest.js"></script>
-            <div class = "border-2 bg-gray-200 rounded-xl pl-12 pr-12 p-4 flex justify-between">
-                <p class = "font-bold mt-2">Reaction Time:</p>
-                <p id="returnTime" class="ReturnTime font-bold p-2 ml-8 text-green-400" id="TimeText">0.00</p>
-                <p id="trailingS" class="ReturnTime font-bold p-2 text-green-400">s</p>
+            <div class = "border-2 bg-gray-900 rounded-xl pl-12 pr-12 p-4 flex justify-between" id="borderReactionTime">
+                <p class = "font-bold text-gray-300 mt-2">Reaction Time:</p>
+                <p id="returnTime" class="ReturnTime font-bold p-2 ml-8 text-green-300" id="TimeText">0.00</p>
+                <p id="trailingS" class="ReturnTime font-bold p-2 text-green-300">s</p>
             </div>
             
         </div>
         <div class = "mt-2 flex justify-center">
             <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
-            mb-1 hover:border-orange-400 hover:text-orange-400  bg-gray-50
-            font-bold text-gray-500
+            mb-1 hover:border-orange-400 hover:text-orange-400  bg-gray-900
+            font-bold text-gray-300
             " id="copy-results" onclick="copyContent()" style="display: none;" > Share my score!</button>
         </div>
 

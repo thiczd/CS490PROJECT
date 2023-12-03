@@ -4,14 +4,20 @@ let appHeader = `
 <head>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<div class="bg-gradient-to-r from-pink-400 to-orange-700 pb-0.5">
 
-<nav class="flex flex-wrap w-full p-4 text-lg text-gray-700 bg-blue-400 mx-auto">
-  <div class="max-w-screen-xl flex flex-wrap items-center m-auto">
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">OurApp</span>
+<nav class="flex flex-wrap w-full p-2 text-lg bg-gray-800 mx-auto border-b">
+  
+
+
+
+<div class="max-w-screen-xl flex flex-wrap items-center m-auto text-white transition ease-in-out delay-100 hover:scale-125 hover:cursor-default">
+<img src="images/joystick.png" class="h-12 w-12 mr-2 mb-2"> 
+      <span class="text-2xl font-semibold whitespace-nowra ">OurApp</span>
   </div>
 
   <a href="./index.html" title="Go to homepage"
-    class="m-2 hover:no-underline hover:bg-blue-500 py-2 px-2  hover:border-transparent rounded">
+    class="m-2 py-2 px-2 hover:no-underline hover:border border-orange-400 rounded-md ">
 
     <div class="flex flex-center">
     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -26,7 +32,7 @@ let appHeader = `
   
   </a>
   <a href="./reactionTimeTest.html" title="Play reaction time test"
-    class="m-2 hover:no-underline hover:bg-blue-500 py-2 px-2  hover:border-transparent rounded">
+    class="m-2 py-2 px-2 hover:no-underline hover:border border-orange-400 rounded-md">
     
     <div class="flex flex-center">
     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alarm" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -43,7 +49,7 @@ let appHeader = `
 
     
   <a href="./timerGuesser.html" title="Play timer guesser"
-    class="m-2 hover:no-underline hover:bg-blue-500 py-2 px-2  hover:border-transparent rounded">
+    class="m-2 py-2 px-2 hover:no-underline hover:border border-orange-400 rounded-md">
     
         <div class="flex flex-center">
 
@@ -61,5 +67,6 @@ let appHeader = `
     </div>
     </a>
 </nav>
+</div>
 `;
 document.getElementById("app-header").innerHTML = appHeader;
