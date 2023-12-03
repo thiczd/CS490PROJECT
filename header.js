@@ -7,7 +7,7 @@ let appHeader = `
 
 <nav class="flex flex-wrap w-full p-4 text-lg text-gray-700 bg-blue-400 mx-auto">
   <div class="max-w-screen-xl flex flex-wrap items-center m-auto">
-      <span class="font-semibold text-xl text-white">Human Benchmark</span>
+      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">OurApp</span>
   </div>
 
   <a href="./index.html" title="Go to homepage"
