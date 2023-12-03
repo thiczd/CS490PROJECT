@@ -18,6 +18,12 @@
     
     </div>
 
+    <div class="flex justify-center mr-24 ml-24 mt-12 border-2 rounded-lg p-4 border-neutral-100">
+      <p class="text-xl font-extralight">In this game you are tasked with guessing how much time has elapsed. Your goal is to guess the displayed time as close as you can possibly can. Good luck !  
+      </p>
+
+  </div>
+
         <div class="border-2 border-gray-200 mt-12 content-center 
         rounded-xl ml-24 mr-24  flex flex-col items-center justify-center pt-24 pb-24 bg-gray-100 pr-24 pl-24">
 
@@ -35,7 +41,7 @@
             <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
             mb-2 hover:border-orange-400 hover:text-orange-400 p-6 bg-gray-50
             font-bold text-gray-500
-            " id="copy-results" onclick="copyContent()" style="display: none;" >Copy my score to the clipboard!</button>
+            " id="copy-results" onclick="copyContent()" style="display: none;" >Share my score!</button>
         </div>
 
         <script>
@@ -43,10 +49,10 @@
               try {
                 await navigator.clipboard.writeText(gameOutput);
                 var copyButton = document.getElementById("copy-results");
-                copyButton.innerText = "Copied!";
-                console.log('Content copied to clipboard');
+                copyButton.innerText = "Score copied to clipboard!";
+                console.log('Score copied to clipboard');
                 setTimeout(function() {
-                    copyButton.innerText = "Copy my score to the clipboard!";
+                    copyButton.innerText = "Share my score!";
                 }, 2000);
               } catch (err) {
                 console.error('Failed to copy: ', err);
