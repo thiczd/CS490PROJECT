@@ -5,9 +5,9 @@ let appHeader = `
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<nav class="flex flex-wrap w-full p-4 text-lg text-gray-700 bg-blue-400 mx-auto">
+<nav class="flex flex-wrap w-full p-2 text-lg text-gray-700 bg-gray-800 mx-auto">
   <div class="max-w-screen-xl flex flex-wrap items-center m-auto">
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">OurApp</span>
+      <span class="text-2xl font-semibold whitespace-nowrap dark:text-white text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">OurApp</span>
   </div>
 
   <a href="./index.html" title="Go to homepage"

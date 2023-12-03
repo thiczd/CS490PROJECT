@@ -11,35 +11,35 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body>
+    <body class="bg-gray-700">
       <div class="flex justify-center mt-12 mb-0">
         <p class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500"> Time Guesser </p>
         
     
     </div>
 
-    <div class="flex justify-center mr-24 ml-24 mt-12 border-2 rounded-lg p-4 border-neutral-100">
-      <p class="text-xl font-extralight">In this game you are tasked with guessing how much time has elapsed. Your goal is to guess the displayed time as close as you can possibly can. Good luck !  
+    <div class="bg-gray-800 flex justify-center mr-24 ml-24 mt-12 border-2 rounded-lg p-4 border-neutral-100">
+      <p class="text-gray-300 text-xl font-extralight">In this game you are tasked with guessing how much time has elapsed. Your goal is to guess the displayed time as close as you can possibly can. Good luck !  
       </p>
 
   </div>
 
-        <div class="border-2 border-gray-200 mt-12 content-center 
-        rounded-xl ml-24 mr-24  flex flex-col items-center justify-center pt-24 pb-24 bg-gray-100 pr-24 pl-24">
+        <div class="border-2 bg-gray-800 mt-12 content-center
+        rounded-xl ml-24 mr-24  flex flex-col items-center justify-center pt-24 pb-24 pr-24 pl-24">
 
-            <div id="goal-time" class = "font-bold mt-2"> Goal Time: <span id="goal-time-val"></span> </div>
+            <div id="goal-time" class = "font-bold text-2xl mt-2 text-gray-300"> Goal Time: <span id="goal-time-val"></span> </div>
             <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
-            mb-2 hover:border-orange-400 hover:text-orange-400 p-6 bg-gray-50
+            mb-2 hover:border-orange-400 hover:text-orange-400 p-6 bg-gray-900
             font-bold text-gray-500
             " id="Main-interact">Click to start!</button>
             <script defer type="text/javascript" src="timerGuesser.js"></script>
-            <div id="user-guess" class = "font-bold mt-2">User Guess: <span id="user-guess-val"></span></div>
-            <div id="score" class = "font-bold mt-2"><span id="score-val"></span></div>
+            <div id="user-guess" class = "font-bold mt-2 text-2xl text-gray-300">User Guess: <span id="user-guess-val"></span></div>
+            <div id="score" class = "font-bold text-orange-300 mt-2"><span id="score-val"></span></div>
         </div>
 
         <div class = "mt-12 flex justify-center">
             <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
-            mb-2 hover:border-orange-400 hover:text-orange-400 p-6 bg-gray-50
+            mb-2 hover:border-orange-400 hover:text-orange-400 p-6 bg-gray-900
             font-bold text-gray-500
             " id="copy-results" onclick="copyContent()" style="display: none;" >Share my score!</button>
         </div>
