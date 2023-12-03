@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //Click after button is green (winning)
     function reactGameEnd() {
         border.style.borderColor = "Green";
-
+        btn.style.backgroundColor="#111827";
         btn.textContent = "Click to start!";
         User.GameState = GameState.Start;
         globalScore = (Date.now() - userGreenTime)/1000;
