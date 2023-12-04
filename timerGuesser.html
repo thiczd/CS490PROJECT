@@ -26,7 +26,7 @@
   <div class="flex justify-center items-center">
 
 
-    <div class="bg-gray-800 flex justify-center mr-48 ml-48 mt-12 border-2 rounded-lg p-4 border-neutral-100">
+    <div class="bg-gray-800 flex justify-center mr-48 ml-48 mt-12 border-0 rounded-lg border-neutral-100">
       <p class="text-gray-300 text-xl font-extralight">In this game you are tasked with guessing how much time has
         elapsed. Your goal is to guess the displayed time as close as you can possibly can. Good luck !
       </p>
@@ -36,14 +36,14 @@
   <div class="flex justify-center items-center">
 
 
-    <div class="border-2 bg-gray-800 mt-12 content-center
-        rounded-xl ml-24 mr-24  flex flex-col items-center justify-center pt-24 pb-24 pr-24 pl-24">
+    <div class="border-0 bg-gray-800 mt-12 content-center
+        rounded-xl ml-24 mr-24  flex flex-col items-center justify-center ">
 
-      <div id="goal-time" class="font-bold text-2xl mt-2 text-gray-300"> Goal Time: <span id="goal-time-val"></span>
+      <div id="goal-time" class="font-bold text-2xl mt-2 text-gray-300 mb-4"> Goal Time: <span id="goal-time-val"></span>
       </div>
-      <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
+      <button class="btn btn-GameEvent border-2 h-72 w-72 rounded-full border-orange-300
             mb-2 hover:border-orange-400 hover:text-orange-400 p-6 bg-gray-900
-            font-bold text-gray-500
+            font-bold text-gray-500 hover:scale-110
             " id="Main-interact">Click to start!</button>
       <script defer type="text/javascript" src="timerGuesser.js"></script>
       <div id="user-guess" class="font-bold mt-2 text-2xl text-gray-300">User Guess: <span id="user-guess-val"></span>

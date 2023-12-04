@@ -26,7 +26,7 @@
         <div class="flex justify-center items-center"> 
 
 
-        <div class=" bg-gray-800 flex justify-center mr-48 ml-48 border-2 rounded-lg p-24 border-neutral-100">
+        <div class=" bg-gray-800 flex justify-center mr-48 ml-48 border-0 rounded-lg  border-neutral-100">
             <p class="text-xl font-extralight text-gray-300">The goal of this game is
                  simple, you are provided with a button, your goal 
                  is to click as fast as you can when that button 
@@ -39,12 +39,12 @@
         <div class="flex justify-center items-center"> 
       
 
-        <div class ="border-2 border-gray-200 content-center 
+        <div class ="border-0 border-gray-200 content-center 
         rounded-xl m-8 flex flex-col items-center justify-center  bg-gray-800">
 
             <div class = "mt-2 flex justify-center">
-                <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
-                mb-1 hover:border-orange-400 hover:text-orange-400 p-4  bg-gray-900
+                <button class="btn btn-GameEvent border-2 h-72 w-72 rounded-full border-orange-300
+                mb-1 hover:border-orange-400 hover:text-orange-400 hover:scale-110  transition ease-in-out delay-100 p-4  bg-gray-900
                 font-bold text-gray-500" id="Main-interact">Click to start!</button>
             </div>
             <script defer type="text/javascript" src="reactionTimeTest.js"></script>
@@ -55,13 +55,13 @@
             </div>
             
         </div>
-        </div>
         <div class = "mt-2 flex justify-center">
             <button class="btn btn-GameEvent border-2 rounded-xl border-orange-300
             mb-1 hover:border-orange-400 hover:text-orange-400  bg-gray-900
             font-bold text-gray-300
             " id="copy-results" onclick="copyContent()" style="display: none;" > Share my score!</button>
         </div>
+    </div>
 
         <script>
             const copyContent = async () => {
