@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gameOutput = `⏲Timer Guesser⏲\nMy Guess: ${elapsed.toFixed(2)} seconds`;
 
         // Display score (|goalTime - elapsed|)
-        if (score === 0) {
+        if (score.toFixed(2) === 0) {
             scoreDisplay.textContent = "Perfect score!";
             gameOutput += "\nI got a perfect score!";
         } else {
