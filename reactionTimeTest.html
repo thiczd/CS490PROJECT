@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src="https://cdn.tailwindcss.com"></script>
 
 <html>
     <!-- apply header from header.js -->
@@ -8,7 +9,6 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="index.css">
         <title>Reaction Time Test</title>
-        <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
     <body class="bg-gray-800">
@@ -66,7 +66,7 @@
         <script>
             const copyContent = async () => {
               try {
-                let copyText = typeof globalScore === "number" ? "⏰Reaction Time Test⏰\nMy Score: " + globalScore + " sec\n📈Human Benchmark📈\nhttps://breakthegreat.github.io/CS490PROJECT/reactionTimeTest.html": globalScore;
+                let copyText = typeof globalScore === "number" ? "⏰Reaction Time Test⏰\nMy Score: " + globalScore + " sec\n\n🎮Time Tango🎮\nhttps://breakthegreat.github.io/CS490PROJECT/reactionTimeTest.html": globalScore;
                 await navigator.clipboard.writeText(copyText);
                 var copyButton = document.getElementById("copy-results");
                 copyButton.innerText = "Score copied to clipboard!";

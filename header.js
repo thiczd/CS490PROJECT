@@ -13,7 +13,7 @@ let appHeader = `
 
 <div class="max-w-screen-xl flex flex-wrap items-center m-auto text-white transition ease-in-out delay-100 hover:scale-125 hover:cursor-default">
 <img src="images/joystick.png" class="h-12 w-12 mr-2 mb-2"> 
-      <span class="text-2xl font-semibold whitespace-nowra ">OurApp</span>
+      <span class="text-2xl font-semibold whitespace-nowra ">TimeTango</span>
   </div>
 
   <a href="./index.html" title="Go to homepage"
@@ -42,7 +42,7 @@ let appHeader = `
     <path d="M7 4l-2.75 2" />
     <path d="M17 4l2.75 2" />
     </svg>
-    <p class="font-bold mt-2 ml-2 text-white">Reaction Game</p>
+    <p class="font-bold mt-2 ml-2 text-white">Reaction Time</p>
     </div> 
     </a>
 

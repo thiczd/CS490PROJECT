@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             scoreDisplay.textContent = `You missed the goal time by ${score.toFixed(2)} seconds`; 
             gameOutput += `\nI missed the goal time by ${score.toFixed(2)} seconds`;
         }
-        gameOutput += "\n📈Human Benchmark📈\nhttps://breakthegreat.github.io/CS490PROJECT/timerGuesser.html"
+        gameOutput += "\n\n🎮TimeTango🎮\nhttps://breakthegreat.github.io/CS490PROJECT/timerGuesser.html"
 
         button.textContent = "Click to try again!";
         User.GameState = GameState.End;
